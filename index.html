@@ -74,7 +74,7 @@
                     </p>
                     <div class="hero__cta">
                         <a href="#contact" class="btn btn--primary btn--large">Agendar Consultoría Inicial</a>
-                        <span class="hero__microcopy">Charlamos sobre tu negocio • 45 minutos • Gratis</span>
+                        <span class="hero__microcopy">Charlamos sobre tu negocio • 45 minutos • Sin compromiso • Gratis</span>
                     </div>
                 </div>
             </div>
@@ -530,22 +530,66 @@
         </div>
     </section>
 
-    <!-- ¿Es esto para tu operación? -->
-    <section class="fit-check">
+    <!-- Síntomas Section -->
+    <section class="symptoms">
         <div class="container">
             <div class="section-header">
-                <h2>¿Es esto para tu operación?</h2>
-                <p class="section-intro">Si te identificás con alguno de estos puntos, podemos ayudarte.</p>
+                <h2>¿Tu negocio tiene alguno de estos síntomas?</h2>
             </div>
-            <div class="fit-check__container">
-                <div class="fit-check__column animate-on-scroll">
-                    <ul class="fit-check__list">
-                        <li>Procesás más de 100 órdenes diarias y los errores crecen con el volumen</li>
-                        <li>Tu equipo dedica más tiempo a tareas administrativas que a atender clientes</li>
-                        <li>Tenés sistemas que no se comunican entre sí y la información crítica vive en spreadsheets</li>
-                        <li>Ya intentaste automatizar algo y los resultados no fueron los esperados</li>
-                        <li>Sabés que hay ineficiencias pero no tenés visibilidad de cuánto cuestan</li>
-                    </ul>
+            <div class="symptoms__grid">
+                <div class="symptom-item animate-on-scroll">
+                    <div class="symptom-item__check">✓</div>
+                    <p class="symptom-item__text">Cuando preguntás "¿cuántos vendimos ayer?" la respuesta tarda más de 5 minutos</p>
+                </div>
+                <div class="symptom-item animate-on-scroll">
+                    <div class="symptom-item__check">✓</div>
+                    <p class="symptom-item__text">Tus empleados copian datos de un sistema a otro todos los días</p>
+                </div>
+                <div class="symptom-item animate-on-scroll">
+                    <div class="symptom-item__check">✓</div>
+                    <p class="symptom-item__text">Tenés mercadería trabada en el depósito mientras clientes preguntan por ella</p>
+                </div>
+                <div class="symptom-item animate-on-scroll">
+                    <div class="symptom-item__check">✓</div>
+                    <p class="symptom-item__text">Tu WhatsApp de proveedores es un caos de mensajes sin respuesta</p>
+                </div>
+                <div class="symptom-item animate-on-scroll">
+                    <div class="symptom-item__check">✓</div>
+                    <p class="symptom-item__text">Ya intentaste organizar con planillas y duraron 2 semanas</p>
+                </div>
+                <div class="symptom-item animate-on-scroll">
+                    <div class="symptom-item__check">✓</div>
+                    <p class="symptom-item__text">No sabés cuánto stock hay en cada sucursal sin llamar por teléfono</p>
+                </div>
+            </div>
+            <div class="section-intro" style="text-align: center; margin-top: var(--spacing-xl); max-width: 700px; margin-left: auto; margin-right: auto;">
+                <p>Si marcaste más de dos, probablemente estás perdiendo tiempo y plata sin darte cuenta. Podemos ayudarte.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Stats Section -->
+    <section class="problem-stats">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lo que nadie te dice sobre tu operación</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card animate-on-scroll">
+                    <span class="stat-card__number" data-target="4" data-suffix=" de 10">0</span>
+                    <p class="stat-card__label">pedidos con más de 50 órdenes diarias tienen algún error humano</p>
+                </div>
+                <div class="stat-card animate-on-scroll">
+                    <span class="stat-card__number" data-target="3" data-suffix=" horas/día">0</span>
+                    <p class="stat-card__label">es lo que un empleado promedio pasa moviendo información entre sistemas</p>
+                </div>
+                <div class="stat-card animate-on-scroll">
+                    <span class="stat-card__number" data-target="60" data-suffix="%">0</span>
+                    <p class="stat-card__label">de los quiebres de stock se podrían evitar con alertas automáticas</p>
+                </div>
+                <div class="stat-card animate-on-scroll">
+                    <span class="stat-card__number" data-target="85" data-suffix="%">0</span>
+                    <p class="stat-card__label">de los proyectos de automatización fracasan porque se diseñan sin conocer la operación</p>
                 </div>
             </div>
         </div>
@@ -835,6 +879,99 @@
                 item.style.transitionDelay = `${index * 0.1}s`;
             });
         });
+
+        // FAQ Accordion Toggle
+        document.querySelectorAll('.faq-accordion__header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.closest('.faq-accordion__item');
+                const isActive = item.classList.contains('active');
+
+                // Close all items
+                document.querySelectorAll('.faq-accordion__item').forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Stats Number Animation
+        function animateNumber(element, target, duration = 2000) {
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + (element.dataset.suffix || '');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current) + (element.dataset.suffix || '');
+                }
+            }, 16);
+        }
+
+        // Observe stats and trigger animation
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-card__number');
+                    statNumbers.forEach(stat => {
+                        if (!stat.classList.contains('animated')) {
+                            stat.classList.add('animated');
+                            const target = parseInt(stat.dataset.target);
+                            animateNumber(stat, target);
+                        }
+                    });
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const problemStats = document.querySelector('.problem-stats');
+        if (problemStats) {
+            statsObserver.observe(problemStats);
+        }
+
+        // Lead Magnet Form Handler
+        const leadMagnetForm = document.querySelector('.lead-magnet__form');
+        if (leadMagnetForm) {
+            leadMagnetForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const emailInput = leadMagnetForm.querySelector('.lead-magnet__input');
+                const button = leadMagnetForm.querySelector('.lead-magnet__button');
+                const email = emailInput.value.trim();
+
+                // Basic email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Por favor, ingresa un email válido');
+                    return;
+                }
+
+                // Show loading state
+                button.textContent = 'Enviando...';
+                button.disabled = true;
+
+                // Simulate API call (replace with actual implementation)
+                setTimeout(() => {
+                    button.textContent = '¡Enviado!';
+                    emailInput.value = '';
+
+                    setTimeout(() => {
+                        button.textContent = 'Descargar';
+                        button.disabled = false;
+                    }, 2000);
+
+                    // Here you would normally send the email to your backend
+                    console.log('Email captured:', email);
+                }, 1000);
+            });
+        }
     </script>
 </body>
 </html>
