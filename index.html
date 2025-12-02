@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="flowkore - Workflow Optimization para Retail de Alto Volumen en Latinoamérica. Rediseñamos procesos críticos con metodología process-first.">
+    <meta name="keywords" content="workflow optimization, retail, automatización, procesos, eficiencia operativa, latinoamérica">
+    <meta name="author" content="flowkore">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="flowkore | Workflow Optimization para Retail">
+    <meta property="og:description" content="Rediseñamos procesos críticos para retail de alto volumen. Tu negocio tiene un 25% de costo escondido. Lo encontramos y lo eliminamos.">
+    <meta property="og:url" content="https://flowkore.com">
+    <meta property="og:locale" content="es_AR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="flowkore | Workflow Optimization para Retail">
+    <meta name="twitter:description" content="Rediseñamos procesos críticos para retail de alto volumen en Latinoamérica.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%231a1a1a'/><path d='M35 30 L65 50 L35 70 Z' fill='%23FAF9F7'/></svg>">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://flowkore.com">
+
+    <title>flowkore | Workflow Optimization • Retail</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container nav__container">
+            <a href="index.html" class="nav__logo" aria-label="flowkore - Ir al inicio">
+                <span class="nav__logo-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                </span>
+                flowkore
+            </a>
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="#methodology" class="nav__link">Cómo trabajamos</a></li>
+                <li><a href="#cases" class="nav__link">Casos</a></li>
+                <li><a href="#contact" class="nav__cta">Agendar Consulta</a></li>
+            </ul>
+            <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero__grid">
+                <div class="hero__content">
+                    <h1 class="hero__title">Tu negocio tiene un 25% de costo escondido. Lo encontramos y lo eliminamos.</h1>
+                    <p class="hero__subtitle">
+                        Revisamos cómo funciona tu negocio paso a paso.
+                        Encontramos dónde se pierde tiempo y plata, armamos un proceso mejor,
+                        y lo dejamos funcionando en 8-12 semanas.
+                    </p>
+                    <div class="hero__cta">
+                        <a href="#contact" class="btn btn--primary btn--large">Agendar Consultoría Inicial</a>
+                        <span class="hero__microcopy">Charlamos sobre tu negocio • 45 minutos • Gratis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__dots-bg"></div>
+    </section>
+
+    <!-- Workflow Visualization Section -->
+    <section class="workflow-viz" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Transformación de Procesos</h2>
+            </div>
+
+            <div class="workflow-viz__wrapper">
+                <!-- Toggle between Before/After -->
+                <div class="workflow-toggle" role="tablist" aria-label="Ver proceso antes y después">
+                    <button class="workflow-toggle__btn active" data-stage="before" role="tab" aria-selected="true">
+                        Proceso Actual
+                    </button>
+                    <button class="workflow-toggle__btn" data-stage="after" role="tab" aria-selected="false">
+                        Proceso Optimizado
+                    </button>
+                </div>
+
+                <!-- Workflow Stages Container -->
+                <div class="workflow-stages">
+                    <!-- BEFORE: Inefficient Process -->
+                    <div class="workflow-stage wf-stage--before active" id="stage-before" role="tabpanel">
+                        <div class="wf-diagram">
+                            <div class="wf-flow">
+                                <!-- Node 1 -->
+                                <div class="wf-node">
+                                    <div class="wf-node__icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="wf-node__label">Pedido entra</span>
+                                </div>
+
+                                <div class="wf-connector">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </div>
+
+                                <!-- Node 2 - BOTTLENECK -->
+                                <div class="wf-node wf-node--bottleneck">
+                                    <div class="wf-node__icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="wf-node__label">Copiar a planilla</span>
+                                    <span class="wf-node__bottleneck-tag">Demora</span>
+                                </div>
+
+                                <div class="wf-connector">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </div>
+
+                                <!-- Node 3 -->
+                                <div class="wf-node">
+                                    <div class="wf-node__icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                                        </svg>
+                                    </div>
+                                    <span class="wf-node__label">Verificar stock</span>
+                                </div>
+
+                                <div class="wf-connector">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </div>
+
+                                <!-- Node 4 - BOTTLENECK -->
+                                <div class="wf-node wf-node--bottleneck">
+                                    <div class="wf-node__icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="wf-node__label">Calcular precio</span>
+                                    <span class="wf-node__bottleneck-tag">Errores</span>
+                                </div>
+
+                                <div class="wf-connector">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </div>
+
+                                <!-- Node 5 -->
+                                <div class="wf-node">
+                                    <div class="wf-node__icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="wf-node__label">Esperar aprobación</span>
+                                </div>
+
+                                <div class="wf-connector">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </div>
+
+                                <!-- Node 6 - BOTTLENECK -->
+                                <div class="wf-node wf-node--bottleneck">
+                                    <div class="wf-node__icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                                        </svg>
+                                    </div>
+                                    <span class="wf-node__label">Juntar info</span>
+                                    <span class="wf-node__bottleneck-tag">Manual</span>
+                                </div>
+
+                                <div class="wf-connector">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </div>
+
+                                <!-- Node 7 -->
+                                <div class="wf-node">
+                                    <div class="wf-node__icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <path d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+                                        </svg>
+                                    </div>
+                                    <span class="wf-node__label">Preparar pedido</span>
+                                </div>
+                            </div>
+
+                            <!-- Label debajo del flow -->
+                            <p class="wf-diagram__label wf-diagram__label--before">7 pasos manuales • 3 puntos donde se traba • Muchos errores</p>
+
+                            <!-- Stats for Before -->
+                            <div class="wf-stats">
+                                <div class="wf-stat">
+                                    <div class="wf-stat__value wf-stat__value--negative">36h</div>
+                                    <div class="wf-stat__label">Tiempo promedio</div>
+                                </div>
+                                <div class="wf-stat">
+                                    <div class="wf-stat__value wf-stat__value--negative">40%</div>
+                                    <div class="wf-stat__label">Pedidos con error</div>
+                                </div>
+                                <div class="wf-stat">
+                                    <div class="wf-stat__value wf-stat__value--negative">7</div>
+                                    <div class="wf-stat__label">Pasos manuales</div>
+                                </div>
+                                <div class="wf-stat">
+                                    <div class="wf-stat__value wf-stat__value--negative">3</div>
+                                    <div class="wf-stat__label">Puntos problemáticos</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AFTER: Optimized Process -->
+                    <div class="workflow-stage wf-stage--after" id="stage-after" role="tabpanel">
+                        <div class="wf-diagram">
+                            <div class="wf-flow">
+                                <!-- Node 1 -->
+                                <div class="wf-node">
+                                    <div class="wf-node__icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="wf-node__label">Pedido entra</span>
+                                </div>
+
+                                <div class="wf-connector" style="position: relative;">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </div>
+
+                                <!-- Node 2 -->
+                                <div class="wf-node">
+                                    <div class="wf-node__icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <path d="M9 3v2m6-2v2M9 19v2m6-2v2M3 9h2m14 0h2M3 15h2m14 0h2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="wf-node__label">Se procesa solo</span>
+                                </div>
+
+                                <div class="wf-connector" style="position: relative;">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </div>
+
+                                <!-- Node 3 -->
+                                <div class="wf-node">
+                                    <div class="wf-node__icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <path d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+                                            <path d="M9 16l2 2 4-4"/>
+                                        </svg>
+                                    </div>
+                                    <span class="wf-node__label">Listo para entregar</span>
+                                </div>
+                            </div>
+
+                            <!-- Label debajo del flow -->
+                            <p class="wf-diagram__label wf-diagram__label--after">3 pasos • Automático • Sin trabas</p>
+
+                            <!-- Stats for After -->
+                            <div class="wf-stats">
+                                <div class="wf-stat">
+                                    <div class="wf-stat__value wf-stat__value--positive">2h</div>
+                                    <div class="wf-stat__label">Tiempo promedio</div>
+                                </div>
+                                <div class="wf-stat">
+                                    <div class="wf-stat__value wf-stat__value--positive">3%</div>
+                                    <div class="wf-stat__label">Pedidos con error</div>
+                                </div>
+                                <div class="wf-stat">
+                                    <div class="wf-stat__value wf-stat__value--positive">3</div>
+                                    <div class="wf-stat__label">Pasos simples</div>
+                                </div>
+                                <div class="wf-stat">
+                                    <div class="wf-stat__value wf-stat__value--positive">0</div>
+                                    <div class="wf-stat__label">Puntos problemáticos</div>
+                                </div>
+                            </div>
+
+                            <!-- Improvement Summary -->
+                            <div class="wf-comparison">
+                                <div class="wf-comparison__item">
+                                    <span class="wf-comparison__dot wf-comparison__dot--before"></span>
+                                    <span>36h / 40% error</span>
+                                </div>
+                                <svg class="wf-comparison__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                                <div class="wf-comparison__item">
+                                    <span class="wf-comparison__dot wf-comparison__dot--after"></span>
+                                    <span>2h / 3% error</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Trabajamos -->
+    <section class="methodology" id="methodology">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cómo trabajamos</h2>
+                <p class="section-intro">Cuatro pasos claros para mejorar tu operación.</p>
+            </div>
+            <div class="methodology__phases">
+                <article class="phase animate-on-scroll">
+                    <span class="phase__number">1</span>
+                    <h3 class="phase__title">Entendemos</h3>
+                    <p class="phase__description">
+                        Miramos cómo funcionan las cosas hoy, medimos cuánto tiempo y plata
+                        se pierde, y encontramos qué se puede mejorar.
+                    </p>
+                    <div class="phase__footer">
+                        <span class="phase__timeline">2 semanas</span>
+                        <p class="phase__deliverables">Informe con los problemas encontrados y un plan de acción</p>
+                    </div>
+                </article>
+                <article class="phase animate-on-scroll">
+                    <span class="phase__number">2</span>
+                    <h3 class="phase__title">Diseñamos</h3>
+                    <p class="phase__description">
+                        Armamos el nuevo proceso paso a paso, sacando todo lo que sobra.
+                        Te lo mostramos y lo ajustamos con tu equipo.
+                    </p>
+                    <div class="phase__footer">
+                        <span class="phase__timeline">2 semanas</span>
+                        <p class="phase__deliverables">El proceso nuevo armado, instrucciones claras, plan para ponerlo en marcha</p>
+                    </div>
+                </article>
+                <article class="phase animate-on-scroll">
+                    <span class="phase__number">3</span>
+                    <h3 class="phase__title">Implementamos</h3>
+                    <p class="phase__description">
+                        Arrancamos con una prueba chica para ver que todo funcione.
+                        Ajustamos lo que haga falta y después lo extendemos a todo el negocio.
+                    </p>
+                    <div class="phase__footer">
+                        <span class="phase__timeline">6 semanas</span>
+                        <p class="phase__deliverables">Sistema funcionando, equipo capacitado, manual de uso</p>
+                    </div>
+                </article>
+                <article class="phase animate-on-scroll">
+                    <span class="phase__number">4</span>
+                    <h3 class="phase__title">Mejoramos</h3>
+                    <p class="phase__description">
+                        Seguimos midiendo los resultados y buscando nuevas oportunidades
+                        para que tu negocio siga mejorando.
+                    </p>
+                    <div class="phase__footer">
+                        <span class="phase__timeline">Continuo</span>
+                        <p class="phase__deliverables">Informes mensuales, análisis de ahorro, nuevas ideas de mejora</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="case-studies" id="cases">
+        <div class="container">
+            <div class="section-header">
+                <h2>Casos</h2>
+                <p class="section-intro">Resultados reales en negocios como el tuyo.</p>
+            </div>
+            <div class="grid grid--3">
+                <article class="case-card animate-on-scroll">
+                    <header class="case-card__header">
+                        <h3 class="case-card__title">Control de Stock en Varias Sucursales</h3>
+                        <p class="case-card__meta">Comercio • 12 locales</p>
+                    </header>
+                    <div class="case-card__section">
+                        <p class="case-card__label">El problema</p>
+                        <p class="case-card__text">
+                            Perdían ventas porque no sabían qué había en cada local.
+                            Verificar stock a mano les llevaba mucho tiempo.
+                        </p>
+                    </div>
+                    <div class="case-card__section">
+                        <p class="case-card__label">Qué hicimos</p>
+                        <p class="case-card__text">
+                            Armamos un sistema donde pueden ver el stock de todos los locales
+                            al instante, sin llamar ni buscar en planillas.
+                        </p>
+                    </div>
+                    <div class="case-card__section">
+                        <p class="case-card__label">Resultados</p>
+                        <div class="case-card__results">
+                            <div class="result-item">
+                                <span class="result-item__value">70%</span>
+                                <span>más ventas cuando buscan en otros locales</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-item__value">20h/semana</span>
+                                <span>de tiempo ahorrado</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-item__value">4h → 2min</span>
+                                <span>para responder consultas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="case-card__footer">
+                        <div class="case-card__stat"><strong>Duración</strong><span>90 días</span></div>
+                        <div class="case-card__stat"><strong>Se recupera en</strong><span>4 meses</span></div>
+                    </footer>
+                </article>
+
+                <article class="case-card animate-on-scroll">
+                    <header class="case-card__header">
+                        <h3 class="case-card__title">Pedidos de Clientes Mayoristas</h3>
+                        <p class="case-card__meta">Distribuidora</p>
+                    </header>
+                    <div class="case-card__section">
+                        <p class="case-card__label">El problema</p>
+                        <p class="case-card__text">
+                            Más de 200 pedidos por día, 4 de cada 10 salían con errores.
+                            Tardaban día y medio en responder y los clientes se quejaban.
+                        </p>
+                    </div>
+                    <div class="case-card__section">
+                        <p class="case-card__label">Qué hicimos</p>
+                        <p class="case-card__text">
+                            Automatizamos la verificación de pedidos, el cálculo de precios
+                            y la generación de facturas. De 5 pasos manuales pasaron a 2.
+                        </p>
+                    </div>
+                    <div class="case-card__section">
+                        <p class="case-card__label">Resultados</p>
+                        <div class="case-card__results">
+                            <div class="result-item">
+                                <span class="result-item__value">15min → 2min</span>
+                                <span>para procesar cada pedido</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-item__value">40% → 3%</span>
+                                <span>de errores</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-item__value">36h → 2h</span>
+                                <span>para responder al cliente</span>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="case-card__footer">
+                        <div class="case-card__stat"><strong>Duración</strong><span>8 semanas</span></div>
+                        <div class="case-card__stat"><strong>Se recupera en</strong><span>1 mes</span></div>
+                    </footer>
+                </article>
+
+                <article class="case-card animate-on-scroll">
+                    <header class="case-card__header">
+                        <h3 class="case-card__title">Reposición de Mercadería</h3>
+                        <p class="case-card__meta">Supermercado • 8 sucursales</p>
+                    </header>
+                    <div class="case-card__section">
+                        <p class="case-card__label">El problema</p>
+                        <p class="case-card__text">
+                            Se quedaban sin los productos que más se venden.
+                            Pedían "a ojo" y terminaban con mercadería de más o de menos.
+                        </p>
+                    </div>
+                    <div class="case-card__section">
+                        <p class="case-card__label">Qué hicimos</p>
+                        <p class="case-card__text">
+                            Armamos un sistema que mira las ventas pasadas, avisa cuándo hay que reponer,
+                            y hace el pedido automáticamente.
+                        </p>
+                    </div>
+                    <div class="case-card__section">
+                        <p class="case-card__label">Resultados</p>
+                        <div class="case-card__results">
+                            <div class="result-item">
+                                <span class="result-item__value">87%</span>
+                                <span>menos faltantes en góndola</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-item__value">3 meses</span>
+                                <span>de plata recuperada en stock</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-item__value">+12%</span>
+                                <span>más ventas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="case-card__footer">
+                        <div class="case-card__stat"><strong>Duración</strong><span>12 semanas</span></div>
+                        <div class="case-card__stat"><strong>Se recupera en</strong><span>3 meses</span></div>
+                    </footer>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿Es esto para tu operación? -->
+    <section class="fit-check">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Es esto para tu operación?</h2>
+                <p class="section-intro">Si te identificás con alguno de estos puntos, podemos ayudarte.</p>
+            </div>
+            <div class="fit-check__container">
+                <div class="fit-check__column animate-on-scroll">
+                    <ul class="fit-check__list">
+                        <li>Procesás más de 100 órdenes diarias y los errores crecen con el volumen</li>
+                        <li>Tu equipo dedica más tiempo a tareas administrativas que a atender clientes</li>
+                        <li>Tenés sistemas que no se comunican entre sí y la información crítica vive en spreadsheets</li>
+                        <li>Ya intentaste automatizar algo y los resultados no fueron los esperados</li>
+                        <li>Sabés que hay ineficiencias pero no tenés visibilidad de cuánto cuestan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formas de Trabajo -->
+    <section class="engagement">
+        <div class="container">
+            <div class="section-header">
+                <h2>Formas de Trabajo</h2>
+                <p class="section-intro">Elegí la modalidad que mejor se adapte a tu negocio.</p>
+            </div>
+            <div class="engagement__grid">
+                <article class="engagement-card animate-on-scroll">
+                    <h3 class="engagement-card__title">Precio Fijo</h3>
+                    <p class="engagement-card__description">
+                        Sabés desde el inicio cuánto vas a pagar. Sin sorpresas.
+                    </p>
+                    <ul class="engagement-card__list">
+                        <li>Análisis completo de tu operación</li>
+                        <li>Diseño del nuevo proceso</li>
+                        <li>Lo implementamos y probamos</li>
+                        <li>90 días de soporte después de arrancar</li>
+                        <li>Capacitamos a tu equipo</li>
+                    </ul>
+                    <p class="engagement-card__note">
+                        Ideal para: operaciones con alcance bien definido y presupuesto asignado.
+                    </p>
+                </article>
+                <article class="engagement-card animate-on-scroll">
+                    <h3 class="engagement-card__title">Por Resultados</h3>
+                    <p class="engagement-card__description">
+                        Pagás menos al inicio y después compartimos lo que ahorrás.
+                    </p>
+                    <ul class="engagement-card__list">
+                        <li>Inversión inicial reducida</li>
+                        <li>Compartimos los ahorros generados</li>
+                        <li>Con un tope máximo acordado</li>
+                        <li>Si vos ganás, nosotros ganamos</li>
+                    </ul>
+                    <p class="engagement-card__note">
+                        Lo medimos con: tiempo ahorrado, errores reducidos, costos eliminados.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Preguntas Frecuentes</h2>
+            </div>
+            <div class="faq__grid">
+                <article class="faq__item animate-on-scroll">
+                    <h3 class="faq__question">¿Cuánto tiempo hasta ver resultados?</h3>
+                    <p class="faq__answer">
+                        En las primeras 2-3 semanas de la prueba inicial ya vas a notar mejoras.
+                        En 8-12 semanas está todo funcionando al 100%.
+                    </p>
+                </article>
+                <article class="faq__item animate-on-scroll">
+                    <h3 class="faq__question">¿Tengo que cambiar los sistemas que ya uso?</h3>
+                    <p class="faq__answer">
+                        No. Trabajamos con lo que ya tenés. Conectamos tus sistemas actuales
+                        para que se hablen entre ellos. Solo si algo muy viejo traba todo,
+                        te recomendamos qué cambiar.
+                    </p>
+                </article>
+                <article class="faq__item animate-on-scroll">
+                    <h3 class="faq__question">¿Mi negocio tiene que parar mientras implementan?</h3>
+                    <p class="faq__answer">
+                        No. Arrancamos con una prueba chica (10-20% de la operación) mientras
+                        todo lo demás sigue funcionando normal. Después vamos extendiendo
+                        de a poco hasta cubrir todo.
+                    </p>
+                </article>
+                <article class="faq__item animate-on-scroll">
+                    <h3 class="faq__question">¿Cuánto tiempo me va a llevar a mí?</h3>
+                    <p class="faq__answer">
+                        Al principio, unas 8-10 horas en 2 semanas para que entendamos bien tu negocio.
+                        Después, alguien de tu equipo que pueda responder dudas y dar el OK a los cambios.
+                        La capacitación la hacemos en sesiones cortas para no frenar tu día a día.
+                    </p>
+                </article>
+                <article class="faq__item animate-on-scroll">
+                    <h3 class="faq__question">¿Y si no funciona?</h3>
+                    <p class="faq__answer">
+                        En el modelo "Por Resultados", solo cobramos el extra si realmente ahorrás plata.
+                        Si no llegamos a los números que acordamos, no pagás ese porcentaje.
+                        Así de simple.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="footer-cta" id="contact">
+        <div class="container">
+            <h2 class="footer-cta__title">¿Querés saber cuánto te está costando hacer las cosas como hoy?</h2>
+            <p class="footer-cta__text">
+                Charlamos 45 minutos sin compromiso. Te contamos qué se puede mejorar
+                y cuánto podrías ahorrar. Gratis.
+            </p>
+            <div class="footer-cta__buttons">
+                <a href="mailto:contacto@flowkore.com?subject=Consulta%20Inicial" class="btn btn--primary btn--large">Agendar Consulta</a>
+                <a href="mailto:contacto@flowkore.com?subject=Solicitar%20Propuesta" class="btn btn--secondary btn--large">Solicitar Propuesta</a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <p class="footer__logo">flowkore</p>
+                    <p class="footer__tagline">
+                        Mejoramos cómo funciona tu negocio
+                    </p>
+                </div>
+                <div class="footer__column">
+                    <h4>Navegación</h4>
+                    <ul class="footer__links">
+                        <li><a href="#methodology">Cómo trabajamos</a></li>
+                        <li><a href="#cases">Casos</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4>Contacto</h4>
+                    <ul class="footer__links">
+                        <li><a href="mailto:contacto@flowkore.com">contacto@flowkore.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4>Redes</h4>
+                    <ul class="footer__links">
+                        <li><a href="https://linkedin.com/company/flowkore" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 flowkore. Todos los derechos reservados.</p>
+                <div class="footer__legal">
+                    <a href="privacidad.html">Privacidad</a>
+                    <a href="terminos.html">Términos de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Navigation scroll effect
+        const nav = document.getElementById('nav');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 50) {
+                nav.classList.add('nav--scrolled');
+            } else {
+                nav.classList.remove('nav--scrolled');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav__link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Workflow Toggle Animation
+        const workflowToggleBtns = document.querySelectorAll('.workflow-toggle__btn');
+        const workflowStages = document.querySelectorAll('.workflow-stage');
+        let autoToggleInterval = null;
+        let isUserInteracting = false;
+
+        function switchStage(targetStage) {
+            workflowToggleBtns.forEach(btn => {
+                const isActive = btn.dataset.stage === targetStage;
+                btn.classList.toggle('active', isActive);
+                btn.setAttribute('aria-selected', isActive);
+            });
+
+            workflowStages.forEach(stage => {
+                const isTarget = stage.id === `stage-${targetStage}`;
+                stage.classList.toggle('active', isTarget);
+            });
+        }
+
+        // Manual toggle
+        workflowToggleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                isUserInteracting = true;
+                clearInterval(autoToggleInterval);
+                switchStage(btn.dataset.stage);
+
+                // Resume auto-toggle after 10 seconds of inactivity
+                setTimeout(() => {
+                    if (isUserInteracting) {
+                        isUserInteracting = false;
+                        startAutoToggle();
+                    }
+                }, 10000);
+            });
+        });
+
+        // Auto-toggle between states
+        function startAutoToggle() {
+            autoToggleInterval = setInterval(() => {
+                if (!isUserInteracting) {
+                    const currentActive = document.querySelector('.workflow-toggle__btn.active');
+                    const nextStage = currentActive.dataset.stage === 'before' ? 'after' : 'before';
+                    switchStage(nextStage);
+                }
+            }, 4000);
+        }
+
+        // Start auto-toggle when section is visible
+        const workflowSection = document.querySelector('.workflow-viz');
+        const workflowVisibilityObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startAutoToggle();
+                } else {
+                    clearInterval(autoToggleInterval);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        workflowVisibilityObserver.observe(workflowSection);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add stagger animation delay to grid items
+        document.querySelectorAll('.grid').forEach(grid => {
+            const items = grid.querySelectorAll('.animate-on-scroll');
+            items.forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
+</html>
